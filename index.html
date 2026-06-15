@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AgroTech Sustentável - Agrinho 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="header-container">
+
+<h1>🌱 AgroTech Sustentável</h1>
+
+<p>Tecnologia e Agro forte para um futuro sustentável</p>
+
+<p>👨‍🌾 Projeto desenvolvido por: <strong>Wellington</strong></p>
+
+<button id="btn-tema" onclick="alternarTema()">
+🌙 Modo Escuro
+</button>
+
+</div>
+
+</header>
+
+
+
+<main class="dashboard">
+
+
+<!-- IDENTIFICAÇÃO -->
+
+<section class="card">
+
+<h2>👨‍🌾 Agricultor Sustentável</h2>
+
+<p>
+Participante responsável pela missão:
+</p>
+
+<h3 class="nome-destaque">
+🌱 Wellington
+</h3>
+
+
+<p id="boasVindas" class="feedback-msg">
+Bem-vindo, Wellington! Sua fazenda sustentável começou.
+</p>
+
+
+</section>
+
+
+
+
+<!-- STATUS -->
+
+<section class="card status-card">
+
+
+<h2>📊 Sua Missão Sustentável</h2>
+
+
+<div id="barra">
+
+<div id="progresso"></div>
+
+</div>
+
+
+<div class="status-info">
+
+<p>
+Pontos:
+<strong id="pontos">0</strong>
+</p>
+
+
+<p id="nivel">
+🌱 Nível Iniciante
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<div class="grid-container">
+
+
+
+<!-- FLORESTA -->
+
+<section class="card">
+
+
+<h2>🌳 Floresta Virtual</h2>
+
+
+<p>
+Árvores plantadas:
+<strong id="arvores">0</strong>
+</p>
+
+
+<button class="btn-principal" onclick="plantarArvore()">
+
+🌱 Plantar Árvore
+
+</button>
+
+
+<p id="mensagemArvore" class="feedback-msg"></p>
+
+
+</section>
+
+
+
+
+
+<!-- QUIZ -->
+
+<section class="card">
+
+
+<h2>📝 Quiz do Agro Verde</h2>
+
+
+<div id="quiz-container">
+
+
+<p id="pergunta-quiz">
+Carregando pergunta...
+</p>
+
+
+
+<div class="quiz-botoes">
+
+
+<button class="btn-quiz" onclick="verificarQuiz(true)">
+Verdadeiro
+</button>
+
+
+<button class="btn-quiz" onclick="verificarQuiz(false)">
+Falso
+</button>
+
+
+</div>
+
+
+</div>
+
+
+<p id="resultadoQuiz" class="feedback-msg"></p>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- PRODUÇÃO -->
+
+<section class="card">
+
+
+<h2>🚜 Tecnologia no Campo</h2>
+
+
+<p>
+Simule uma colheita utilizando tecnologia inteligente.
+</p>
+
+
+<button class="btn-principal" onclick="simularProducao()">
+
+🚜 Simular Produção
+
+</button>
+
+
+<p id="simulacao" class="resultado-destaque"></p>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- IMPACTO -->
+
+<section class="card">
+
+
+<h2>💧 Pegada Ecológica</h2>
+
+
+<p>
+Avalie o impacto ambiental da fazenda.
+</p>
+
+
+<button class="btn-principal" onclick="calcularImpacto()">
+
+🌎 Calcular Impacto
+
+</button>
+
+
+<p id="impacto" class="resultado-destaque"></p>
+
+
+</section>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- CONQUISTAS -->
+
+<section class="card">
+
+
+<h2>🏅 Conquistas Sustentáveis</h2>
+
+
+<p id="conquista">
+
+Complete desafios para ganhar seu selo verde!
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- IA -->
+
+<section class="card ia-card">
+
+
+<h2>🤖 AgroIA - Assistente Virtual</h2>
+
+
+<p>
+Tire dúvidas sobre sustentabilidade e tecnologia no campo.
+</p>
+
+
+
+<div class="ia-container">
+
+
+<input 
+type="text" 
+id="input-ia"
+placeholder="Ex: O que é agricultura de precisão?"
+>
+
+
+<button class="btn-principal" onclick="perguntarIA()">
+
+Perguntar para IA
+
+</button>
+
+
+</div>
+
+
+
+<div id="resposta-ia-box" class="ia-resposta-box" style="display:none;">
+
+
+<strong>
+AgroIA diz:
+</strong>
+
+
+<p id="resposta-ia">
+Carregando resposta...
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- RESULTADO FINAL -->
+
+<section class="card final-card">
+
+
+<h2>🏆 Avaliação Agrinho 2026</h2>
+
+
+<p>
+Será que a fazenda do Wellington está pronta para receber o selo verde?
+</p>
+
+
+
+<button class="btn-final" onclick="verificarFinal()">
+
+🌱 Verificar Resultado Final
+
+</button>
+
+
+
+<p id="final" class="feedback-msg"></p>
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+<footer>
+
+
+<p>
+Projeto desenvolvido para o Concurso Agrinho 2026
+</p>
+
+
+<p>
+✨ AgroTech Sustentável - Tecnologia a favor do Meio Ambiente
+</p>
+
+
+<p>
+👨‍🌾 Desenvolvedor: Wellington
+</p>
+
+
+</footer>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
